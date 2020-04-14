@@ -33,7 +33,7 @@
     
 <main>
     <h1 class="plugin-header">
-        AiiDA plugin package &quot;<a href="https://github.com/albgar/aiida_siesta_plugin/tree/master">aiida-siesta</a>&quot;
+        AiiDA plugin package &quot;<a href="https://gitlab.com/bz1/aiida-castep">aiida-castep</a>&quot;
     </h1>
     <p><a href="../index.html">&lt; back to the registry index</a></p>
 
@@ -45,23 +45,23 @@
         </p>
         
         <p>
-            <strong>Short description</strong>: A plugin for Siesta&#39;s basic functionality within the AiiDA framework.
+            <strong>Short description</strong>: AiiDA plugin for CASTEP
         </p>
         
         
         <p>
-            <strong>How to install</strong>: <code>pip install aiida-siesta</code>
+            <strong>How to install</strong>: <code>pip install aiida-castep</code>
         </p>
         
 
         <p>
-            <strong>Source code</strong>: <a href="https://github.com/albgar/aiida_siesta_plugin/tree/master" target="_blank">Go to the source code repository</a>
+            <strong>Source code</strong>: <a href="https://gitlab.com/bz1/aiida-castep" target="_blank">Go to the source code repository</a>
         </p>
     </div>
 
     
         <p>
-            <strong>Documentation</strong>: <a href="https://aiida-siesta-plugin.readthedocs.io/" target="_blank">Go to plugin documentation</a>
+            <strong>Documentation</strong>: <a href="https://aiida-castep.readthedocs.io/" target="_blank">Go to plugin documentation</a>
         <p>
     
 
@@ -72,18 +72,18 @@
     
     <div id='description'>
         <p>
-            <strong>Author(s)</strong>: Alberto Garcia, Victor M. Garcia-Suarez, Emanuele Bosoni, Vladimir Dikan
+            <strong>Author(s)</strong>: Bonan Zhu
         </p>
         
         <p>
-            <strong>Contact</strong>: <a href="mailto:albertog@icmab.es">albertog@icmab.es</a>
+            <strong>Contact</strong>: <a href="mailto:bz240@cam.ac.uk">bz240@cam.ac.uk</a>
         </p>
         
         <p>
-            <strong>How to use from python</strong>: <code>import aiida_siesta</code>
+            <strong>How to use from python</strong>: <code>import aiida_castep</code>
         </p>
         <p>
-            <strong>Most recent version</strong>: 1.0.1
+            <strong>Most recent version</strong>: 1.0.0
         </p>
         <p>
             <strong>Compatibility</strong>:
@@ -96,7 +96,7 @@
         
         <span class="badge">
             <span class="badge-left blue">Calculations</span>
-            <span class="badge-right">2</span>
+            <span class="badge-right">6</span>
         </span>
         
         <span class="badge">
@@ -115,8 +115,8 @@
         </span>
         
         <span class="badge">
-            <span class="badge-left orange">Other (Data commands)</span>
-            <span class="badge-right">2</span>
+            <span class="badge-left orange">Other (Console scripts, Data commands, Tests, ...)</span>
+            <span class="badge-right">9</span>
         </span>
         
         
@@ -125,19 +125,53 @@
             
                 <h4>
                     
+                      Command-line scripts <span class="entrypointraw">(console_scripts)</span>
+                    
+                </h4>
+                <ul>
+                
+                <li><code>castep.mock</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.utils.mock:main
+                    </span></div></li>
+                
+                </ul>
+            
+                <h4>
+                    
                       CalcJobs and calculation functions <span class="entrypointraw">(aiida.calculations)</span>
                     
                 </h4>
                 <ul>
                 
-                <li><code>siesta.siesta</code>
+                <li><code>castep.castep</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.calculations.siesta:SiestaCalculation
+                        aiida_castep.calculations.castep:CastepCalculation
                     </span></div></li>
                 
-                <li><code>siesta.stm</code>
+                <li><code>castep.bs</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.calculations.stm:STMCalculation
+                        aiida_castep.calculations.castep:CastepBSCalculation
+                    </span></div></li>
+                
+                <li><code>castep.spec</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.castep:CastepSpectralCalculation
+                    </span></div></li>
+                
+                <li><code>castep.pot1d</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.castep:Pot1dCalculation
+                    </span></div></li>
+                
+                <li><code>castep.ts</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.castep:CastepTSCalculation
+                    </span></div></li>
+                
+                <li><code>castep.phonon</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.castep:CastepPhononCalculation
                     </span></div></li>
                 
                 </ul>
@@ -149,38 +183,14 @@
                 </h4>
                 <ul>
                 
-                <li><code>siesta.parser</code>
+                <li><code>castep.castep</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.parsers.siesta:SiestaParser
+                        aiida_castep.parsers.castep:CastepParser
                     </span></div></li>
                 
-                <li><code>siesta.stm</code>
+                <li><code>castep.pot1d</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.parsers.stm:STMParser
-                    </span></div></li>
-                
-                </ul>
-            
-                <h4>
-                    
-                      WorkChains and work functions <span class="entrypointraw">(aiida.workflows)</span>
-                    
-                </h4>
-                <ul>
-                
-                <li><code>siesta.base</code>
-                    <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.workflows.base:SiestaBaseWorkChain
-                    </span></div></li>
-                
-                <li><code>siesta.bands</code>
-                    <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.workflows.bands:SiestaBandsWorkChain
-                    </span></div></li>
-                
-                <li><code>siesta.stm</code>
-                    <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.workflows.stm:SiestaSTMWorkChain
+                        aiida_castep.parsers.castep:Pot1dParser
                     </span></div></li>
                 
                 </ul>
@@ -192,14 +202,28 @@
                 </h4>
                 <ul>
                 
-                <li><code>siesta.psf</code>
+                <li><code>castep.uspdata</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.data.psf:PsfData
+                        aiida_castep.data.usp:UspData
                     </span></div></li>
                 
-                <li><code>siesta.psml</code>
+                <li><code>castep.otfgdata</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.data.psml:PsmlData
+                        aiida_castep.data.otfg:OTFGData
+                    </span></div></li>
+                
+                </ul>
+            
+                <h4>
+                    
+                      Development test modules <span class="entrypointraw">(aiida.tests)</span>
+                    
+                </h4>
+                <ul>
+                
+                <li><code>castep.calculation</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.tests.dbtests.dbtestcalculation
                     </span></div></li>
                 
                 </ul>
@@ -211,14 +235,72 @@
                 </h4>
                 <ul>
                 
-                <li><code>psf</code>
+                <li><code>castep-usp</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.commands.data_psf:psfdata
+                        aiida_castep.cmdline.usp_cmd:usp_cmd
                     </span></div></li>
                 
-                <li><code>psml</code>
+                <li><code>castep-otfg</code>
                     <div class="classbox">class<span class="tooltiptext">
-                        aiida_siesta.commands.data_psml:psmldata
+                        aiida_castep.cmdline.otfg_cmd:otfg_cmd
+                    </span></div></li>
+                
+                <li><code>castep-helper</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.cmdline.helper_cmd:helper_cmd
+                    </span></div></li>
+                
+                </ul>
+            
+                <h4>
+                    
+                      aiida.tools.calculations
+                    
+                </h4>
+                <ul>
+                
+                <li><code>castep.castep</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.tools:CastepCalcTools
+                    </span></div></li>
+                
+                <li><code>castep.spec</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.tools:CastepCalcTools
+                    </span></div></li>
+                
+                <li><code>castep.phonon</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.tools:CastepCalcTools
+                    </span></div></li>
+                
+                <li><code>castep.bs</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.calculations.tools:CastepCalcTools
+                    </span></div></li>
+                
+                </ul>
+            
+                <h4>
+                    
+                      WorkChains and work functions <span class="entrypointraw">(aiida.workflows)</span>
+                    
+                </h4>
+                <ul>
+                
+                <li><code>castep.base</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.workflows.base:CastepBaseWorkChain
+                    </span></div></li>
+                
+                <li><code>castep.relax</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.workflows.relax:CastepRelaxWorkChain
+                    </span></div></li>
+                
+                <li><code>castep.altrelax</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida_castep.workflows.relax:CastepAlterRelaxWorkChain
                     </span></div></li>
                 
                 </ul>
