@@ -41,7 +41,7 @@
     <div>
         <p>
             Current state:
-            <img class="svg-badge" src="../static/img/state-stable-4cc61e.svg" title="Ready for production calculations. Bug reports welcome!">
+            <img class="svg-badge" src="../static/img/status-stable-4cc61e.svg" title="Ready for production calculations. Bug reports welcome!">
         </p>
         
         
@@ -79,7 +79,7 @@
             <strong>How to use from python</strong>: <code>import aiida</code>
         </p>
         <p>
-            <strong>Most recent version</strong>: 1.1.1
+            <strong>Most recent version</strong>: 1.2.1
         </p>
         <p>
             <strong>Compatibility</strong>:
@@ -106,8 +106,13 @@
         </span>
         
         <span class="badge">
-            <span class="badge-left orange">Other (Cmdline computer configure, Console scripts, Data commands, ...)</span>
-            <span class="badge-right">39</span>
+            <span class="badge-left purple">Console scripts</span>
+            <span class="badge-right">2</span>
+        </span>
+        
+        <span class="badge">
+            <span class="badge-left orange">Other (Cmdline computer configure, Data commands, Database Importers, ...)</span>
+            <span class="badge-right">42</span>
         </span>
         
         
@@ -116,7 +121,7 @@
             
                 <h4>
                     
-                      Command-line scripts <span class="entrypointraw">(console_scripts)</span>
+                      Console scripts <span class="entrypointraw">(console_scripts)</span>
                     
                 </h4>
                 <ul>
@@ -124,6 +129,11 @@
                 <li><code>verdi</code>
                     <div class="classbox">class<span class="tooltiptext">
                         aiida.cmdline.commands.cmd_verdi:verdi
+                    </span></div></li>
+                
+                <li><code>runaiida</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida.cmdline.commands.cmd_run:run
                     </span></div></li>
                 
                 </ul>
@@ -341,6 +351,35 @@
             
                 <h4>
                     
+                      Group types <span class="entrypointraw">(aiida.groups)</span>
+                    
+                </h4>
+                <ul>
+                
+                <li><code>core</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida.orm.groups:Group
+                    </span></div></li>
+                
+                <li><code>core.auto</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida.orm.groups:AutoGroup
+                    </span></div></li>
+                
+                <li><code>core.import</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida.orm.groups:ImportGroup
+                    </span></div></li>
+                
+                <li><code>core.upf</code>
+                    <div class="classbox">class<span class="tooltiptext">
+                        aiida.orm.groups:UpfFamily
+                    </span></div></li>
+                
+                </ul>
+            
+                <h4>
+                    
                       aiida.node
                     
                 </h4>
@@ -448,7 +487,7 @@
             
                 <h4>
                     
-                      aiida.transports
+                      Data transport protocols <span class="entrypointraw">(aiida.transports)</span>
                     
                 </h4>
                 <ul>
@@ -476,7 +515,7 @@
             
                 <h4>
                     
-                      aiida.tools.dbexporters
+                      Support for exporting to external databases <span class="entrypointraw">(aiida.tools.dbexporters)</span>
                     
                 </h4>
                 <ul>
@@ -485,7 +524,7 @@
             
                 <h4>
                     
-                      aiida.tools.dbimporters
+                      Support for importing from external databases <span class="entrypointraw">(aiida.tools.dbimporters)</span>
                     
                 </h4>
                 <ul>
